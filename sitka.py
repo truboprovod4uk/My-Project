@@ -91,15 +91,15 @@ btn_calc.bind('<Button-1>',lambda  event: circ(int(entry_X.get()),
                                                int(entry_s.get()),
                                                int(entry_si.get()),
                                                ))
-btn_calc.place(x=150,y=10,width=35)
+btn_calc.place(x=150,y=10,width=100)
 
 
 btn_sitka=Button(root,text='sitka')
 btn_sitka.bind('<Button-1>',lambda event: sitka(WIDTH, HEIGHT, dx, dy))
-btn_sitka.place(x=150, y=40, width=35)
+btn_sitka.place(x=150, y=40, width=100)
 
 btn_clean = Button(root, text='clean')
 btn_clean.bind('<Button-1>', lambda event: clean())
-btn_clean.place(x=150,y=70, width=35)
+btn_clean.place(x=150,y=70, width=100)
 
 root.mainloop()
