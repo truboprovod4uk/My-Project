@@ -1,3 +1,4 @@
+# Це не мій проект, програма написана по прикладу з ютуба
 from tkinter import *
 import math
 root = Tk()
