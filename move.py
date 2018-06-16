@@ -2,7 +2,6 @@
 from tkinter import *
 import math
 
-
 # настройки вікна
 WIDTH = 600
 HEIGHT = 200
@@ -25,7 +24,6 @@ board_left = c.create_line(WIDTH/shift,HEIGHT/shift,WIDTH/shift,HEIGHT-HEIGHT/sh
 board_right = c.create_line(WIDTH-WIDTH/shift,HEIGHT/shift,WIDTH-WIDTH/shift,HEIGHT-HEIGHT/shift, width=2)
 
 # створюєм мяч
-
 dy=20
 BALL = c.create_oval(WIDTH/2-BALL_RADIUS/2,
                      HEIGHT/2-BALL_RADIUS/2,
@@ -66,7 +64,6 @@ def move_ball_1():
         BALL_X_CHANGE = -BALL_X_CHANGE
     c.move(BALL, BALL_X_CHANGE, BALL_Y_CHANGE)
 
-
 # Ця функція рухає мячик по периметру
 def move_ball_2():
     speed = 3
@@ -90,9 +87,6 @@ def move_ball_2():
 
     c.move(BALL, BALL_X_CHANGE, BALL_Y_CHANGE)
 
-
-
-
 # Ця функція рухає мячик по синусоїді
 def move_ball_3():
     global BALL_X_CHANGE
@@ -112,7 +106,7 @@ def move_ball_3():
     c.move(BALL, BALL_X_CHANGE, BALL_Y_CHANGE)
 
 
-# Ця функція НЕ рухає мячик по колу
+# Ця функція НЕ рухає мячик по колу, потрібно доробити
 def move_ball_4():
     r = 100
     global BALL_X_CHANGE
@@ -129,7 +123,6 @@ def move_ball_4():
     BALL_Y_CHANGE = 400 - math.sqrt(r ** 2 - (ball_center_X-200)** 2)# тут вираховується координата, а треба зсув
     c.move(BALL, BALL_X_CHANGE, BALL_Y_CHANGE)
     print(BALL_Y_CHANGE)
-
 
 # Ця функція прискорює мячик з кожним відскоком від стінки(тільки по Х), до максимально допустимої швидкості -------
 def move_ball_5():
@@ -155,7 +148,6 @@ def move_ball_5():
     c.move(BALL, BALL_X_CHANGE, BALL_Y_CHANGE)
     print(BALL_X_CHANGE)
 
-
 # Ця функція рухає мячик по Х від стінки до стінки, та сповільнює його рух при наближенні до стінки
 def move_ball_6():
     global BALL_X_CHANGE
@@ -180,16 +172,13 @@ def move_ball_6():
     c.move(BALL, BALL_X_CHANGE*koef, BALL_Y_CHANGE)
     
     print(BALL_X_CHANGE*koef)
-
     
 def main(): 
     move_ball_6() # move_ball_х(), де х траекторія руху кульки, потрібно вручну прописати траекторію
     root.after(30, main)
 
-
 # запускаємо рух
 main()
-
 
 # запускаємо роботу вікна
 root.mainloop()
