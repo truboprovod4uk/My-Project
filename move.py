@@ -181,8 +181,9 @@ def move_ball_6():
     
     print(BALL_X_CHANGE*koef)
 
-def main():
-    move_ball_6()
+    
+def main(): 
+    move_ball_6() # move_ball_х(), де х траекторія руху кульки, потрібно вручну прописати траекторію
     root.after(30, main)
 
 
