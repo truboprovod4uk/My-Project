@@ -93,11 +93,12 @@ btn_calc.bind('<Button-1>',lambda  event: circ(int(entry_X.get()),
                                                ))
 btn_calc.place(x=150,y=10,width=100)
 
-
+#ця кнопка включає сітку
 btn_sitka=Button(root,text='sitka')
 btn_sitka.bind('<Button-1>',lambda event: sitka(WIDTH, HEIGHT, dx, dy))
 btn_sitka.place(x=150, y=40, width=100)
 
+#ця кнопка очищає поле
 btn_clean = Button(root, text='clean')
 btn_clean.bind('<Button-1>', lambda event: clean())
 btn_clean.place(x=150,y=70, width=100)
