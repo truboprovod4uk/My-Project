@@ -43,7 +43,7 @@ BALL = c.create_oval(WIDTH/2-BALL_RADIUS/2,
                      650+BALL_RADIUS/2, fill="white")'''
 
 
-
+# задаємо зміщення для кульки по X та Y
 BALL_X_CHANGE = 10
 BALL_Y_CHANGE = 0
 
