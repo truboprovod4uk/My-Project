@@ -11,7 +11,7 @@ BALL_RADIUS = 25
 
 # встановлюєм вікно
 root = Tk()
-root.title("PythonicWay Pong")
+root.title("move_ball")
 
 # встановлюєм канву
 c = Canvas(root, width=WIDTH, height=HEIGHT, background="#003300")
